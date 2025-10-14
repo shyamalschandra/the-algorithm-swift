@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="blueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1DA1F2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0D8BD9;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="orangeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FA5F55;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E53E3E;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="greenGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#28A745;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1E7E34;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="purpleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6C757D;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#495057;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="#F8F9FA"/>
+  
+  <!-- Title -->
+  <text x="400" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#1DA1F2">
+    Twitter Algorithm - System Architecture
+  </text>
+  
+  <!-- User Input -->
+  <rect x="50" y="80" width="120" height="60" rx="10" fill="url(#blueGradient)" stroke="#0D8BD9" stroke-width="2"/>
+  <text x="110" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">User ID</text>
+  <text x="110" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Input</text>
+  
+  <!-- Candidate Sourcing -->
+  <rect x="250" y="80" width="150" height="60" rx="10" fill="url(#orangeGradient)" stroke="#E53E3E" stroke-width="2"/>
+  <text x="325" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">Candidate Sourcing</text>
+  <text x="325" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">In-Network, Out-of-Network, Trending</text>
+  
+  <!-- Ranking System -->
+  <rect x="450" y="80" width="150" height="60" rx="10" fill="url(#greenGradient)" stroke="#1E7E34" stroke-width="2"/>
+  <text x="525" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">Ranking System</text>
+  <text x="525" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Light Ranker + Heavy Ranker</text>
+  
+  <!-- Filtering -->
+  <rect x="250" y="200" width="150" height="60" rx="10" fill="url(#purpleGradient)" stroke="#495057" stroke-width="2"/>
+  <text x="325" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">Filtering</text>
+  <text x="325" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Content, User, Engagement</text>
+  
+  <!-- Mixing -->
+  <rect x="450" y="200" width="150" height="60" rx="10" fill="url(#blueGradient)" stroke="#0D8BD9" stroke-width="2"/>
+  <text x="525" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">Timeline Mixing</text>
+  <text x="525" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Diversity Optimization</text>
+  
+  <!-- Notifications -->
+  <rect x="250" y="320" width="150" height="60" rx="10" fill="url(#orangeGradient)" stroke="#E53E3E" stroke-width="2"/>
+  <text x="325" y="345" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">Notifications</text>
+  <text x="325" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Personalized, Trending</text>
+  
+  <!-- Output -->
+  <rect x="50" y="320" width="120" height="60" rx="10" fill="url(#greenGradient)" stroke="#1E7E34" stroke-width="2"/>
+  <text x="110" y="345" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">Timeline</text>
+  <text x="110" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Output</text>
+  
+  <!-- ML Models -->
+  <rect x="650" y="80" width="120" height="60" rx="10" fill="url(#purpleGradient)" stroke="#495057" stroke-width="2"/>
+  <text x="710" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">ML Models</text>
+  <text x="710" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Neural Networks</text>
+  
+  <!-- Feature Extraction -->
+  <rect x="650" y="200" width="120" height="60" rx="10" fill="url(#greenGradient)" stroke="#1E7E34" stroke-width="2"/>
+  <text x="710" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">Feature</text>
+  <text x="710" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Extraction</text>
+  
+  <!-- SwiftUI Visualization -->
+  <rect x="650" y="320" width="120" height="60" rx="10" fill="url(#blueGradient)" stroke="#0D8BD9" stroke-width="2"/>
+  <text x="710" y="345" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">SwiftUI</text>
+  <text x="710" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Visualization</text>
+  
+  <!-- Arrows -->
+  <!-- User to Candidate Sourcing -->
+  <path d="M 170 110 L 250 110" stroke="#1DA1F2" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Candidate Sourcing to Ranking -->
+  <path d="M 400 110 L 450 110" stroke="#FA5F55" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Ranking to Filtering -->
+  <path d="M 525 140 L 400 200" stroke="#28A745" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Filtering to Mixing -->
+  <path d="M 400 230 L 450 230" stroke="#6C757D" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Mixing to Notifications -->
+  <path d="M 525 260 L 400 320" stroke="#1DA1F2" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Notifications to Output -->
+  <path d="M 250 350 L 170 350" stroke="#FA5F55" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- ML Models to Ranking -->
+  <path d="M 650 110 L 600 110 L 600 140 L 525 140" stroke="#6C757D" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Feature Extraction to ML Models -->
+  <path d="M 710 200 L 710 140" stroke="#28A745" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- SwiftUI to all components -->
+  <path d="M 650 350 L 400 350 L 400 200" stroke="#1DA1F2" stroke-width="2" fill="none" stroke-dasharray="5,5"/>
+  
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+  </defs>
+  
+  <!-- Data flow labels -->
+  <text x="210" y="105" font-family="Arial, sans-serif" font-size="10" fill="#1DA1F2">User Request</text>
+  <text x="325" y="65" font-family="Arial, sans-serif" font-size="10" fill="#FA5F55">Candidates</text>
+  <text x="525" y="65" font-family="Arial, sans-serif" font-size="10" fill="#28A745">Scores</text>
+  <text x="325" y="185" font-family="Arial, sans-serif" font-size="10" fill="#6C757D">Filtered</text>
+  <text x="525" y="185" font-family="Arial, sans-serif" font-size="10" fill="#1DA1F2">Mixed</text>
+  <text x="325" y="305" font-family="Arial, sans-serif" font-size="10" fill="#FA5F55">Notifications</text>
+  <text x="210" y="345" font-family="Arial, sans-serif" font-size="10" fill="#28A745">Timeline</text>
+  
+  <!-- Performance metrics -->
+  <text x="50" y="450" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1DA1F2">Performance Metrics:</text>
+  <text x="50" y="470" font-family="Arial, sans-serif" font-size="12" fill="#333">• Total Algorithm Time: &lt; 200ms</text>
+  <text x="50" y="485" font-family="Arial, sans-serif" font-size="12" fill="#333">• ML Inference: &lt; 5ms per prediction</text>
+  <text x="50" y="500" font-family="Arial, sans-serif" font-size="12" fill="#333">• Memory Usage: &lt; 100MB runtime</text>
+  <text x="50" y="515" font-family="Arial, sans-serif" font-size="12" fill="#333">• Test Coverage: 100% for core components</text>
+  
+  <!-- Swift 6.1+ Features -->
+  <text x="400" y="450" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#FA5F55">Swift 6.1+ Features:</text>
+  <text x="400" y="470" font-family="Arial, sans-serif" font-size="12" fill="#333">• Structured Concurrency (async/await)</text>
+  <text x="400" y="485" font-family="Arial, sans-serif" font-size="12" fill="#333">• Actor Isolation (@MainActor)</text>
+  <text x="400" y="500" font-family="Arial, sans-serif" font-size="12" fill="#333">• SwiftUI Declarative UI</text>
+  <text x="400" y="515" font-family="Arial, sans-serif" font-size="12" fill="#333">• Swift Package Manager</text>
+</svg>

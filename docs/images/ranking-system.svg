@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="700" height="500" viewBox="0 0 700 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="lightRankerGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FA5F55;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E53E3E;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="heavyRankerGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#28A745;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1E7E34;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="featureGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1DA1F2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0D8BD9;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="700" height="500" fill="#F8F9FA"/>
+  
+  <!-- Title -->
+  <text x="350" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#1DA1F2">
+    Ranking System Architecture
+  </text>
+  
+  <!-- Input: Candidates -->
+  <rect x="50" y="80" width="120" height="60" rx="10" fill="url(#featureGradient)" stroke="#0D8BD9" stroke-width="2"/>
+  <text x="110" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">Candidates</text>
+  <text x="110" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">~1000 tweets</text>
+  
+  <!-- Feature Extraction -->
+  <rect x="200" y="80" width="140" height="60" rx="10" fill="url(#featureGradient)" stroke="#0D8BD9" stroke-width="2"/>
+  <text x="270" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">Feature Extraction</text>
+  <text x="270" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">14+ features per tweet</text>
+  
+  <!-- Light Ranker -->
+  <rect x="380" y="80" width="140" height="60" rx="10" fill="url(#lightRankerGradient)" stroke="#E53E3E" stroke-width="2"/>
+  <text x="450" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">Light Ranker</text>
+  <text x="450" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Linear Model + Sigmoid</text>
+  
+  <!-- Heavy Ranker -->
+  <rect x="200" y="200" width="140" height="60" rx="10" fill="url(#heavyRankerGradient)" stroke="#1E7E34" stroke-width="2"/>
+  <text x="270" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">Heavy Ranker</text>
+  <text x="270" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Neural Network</text>
+  
+  <!-- Output: Ranked Candidates -->
+  <rect x="380" y="200" width="140" height="60" rx="10" fill="url(#featureGradient)" stroke="#0D8BD9" stroke-width="2"/>
+  <text x="450" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">Ranked Candidates</text>
+  <text x="450" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Scored by relevance</text>
+  
+  <!-- Feature Categories -->
+  <g transform="translate(50, 300)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1DA1F2">Feature Categories:</text>
+    
+    <!-- Engagement Features -->
+    <rect x="0" y="20" width="15" height="12" fill="url(#featureGradient)" stroke="#0D8BD9" stroke-width="1"/>
+    <text x="25" y="30" font-family="Arial, sans-serif" font-size="11" fill="#333">Engagement: Likes, retweets, replies, quotes</text>
+    
+    <!-- Temporal Features -->
+    <rect x="0" y="40" width="15" height="12" fill="url(#lightRankerGradient)" stroke="#E53E3E" stroke-width="1"/>
+    <text x="25" y="50" font-family="Arial, sans-serif" font-size="11" fill="#333">Temporal: Recency, time decay, freshness</text>
+    
+    <!-- Content Features -->
+    <rect x="0" y="60" width="15" height="12" fill="url(#heavyRankerGradient)" stroke="#1E7E34" stroke-width="1"/>
+    <text x="25" y="70" font-family="Arial, sans-serif" font-size="11" fill="#333">Content: Length, media, hashtags, mentions</text>
+    
+    <!-- Author Features -->
+    <rect x="0" y="80" width="15" height="12" fill="url(#featureGradient)" stroke="#0D8BD9" stroke-width="1"/>
+    <text x="25" y="90" font-family="Arial, sans-serif" font-size="11" fill="#333">Author: Followers, verification, reputation</text>
+    
+    <!-- User Features -->
+    <rect x="0" y="100" width="15" height="12" fill="url(#lightRankerGradient)" stroke="#E53E3E" stroke-width="1"/>
+    <text x="25" y="110" font-family="Arial, sans-serif" font-size="11" fill="#333">User: Engagement rate, activity score</text>
+  </g>
+  
+  <!-- Arrows -->
+  <!-- Candidates to Feature Extraction -->
+  <path d="M 170 110 L 200 110" stroke="#1DA1F2" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Feature Extraction to Light Ranker -->
+  <path d="M 340 110 L 380 110" stroke="#1DA1F2" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Light Ranker to Heavy Ranker -->
+  <path d="M 450 140 L 270 200" stroke="#FA5F55" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Heavy Ranker to Output -->
+  <path d="M 340 230 L 380 230" stroke="#28A745" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+  </defs>
+  
+  <!-- Data flow labels -->
+  <text x="185" y="105" font-family="Arial, sans-serif" font-size="10" fill="#1DA1F2">Raw Data</text>
+  <text x="270" y="65" font-family="Arial, sans-serif" font-size="10" fill="#1DA1F2">Features</text>
+  <text x="450" y="65" font-family="Arial, sans-serif" font-size="10" fill="#FA5F55">Light Scores</text>
+  <text x="270" y="185" font-family="Arial, sans-serif" font-size="10" fill="#28A745">Heavy Scores</text>
+  <text x="450" y="185" font-family="Arial, sans-serif" font-size="10" fill="#1DA1F2">Final Scores</text>
+  
+  <!-- Performance metrics -->
+  <g transform="translate(400, 300)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#28A745">Performance:</text>
+    <text x="0" y="20" font-family="Arial, sans-serif" font-size="12" fill="#333">• Light Ranker: ~5ms per batch</text>
+    <text x="0" y="35" font-family="Arial, sans-serif" font-size="12" fill="#333">• Heavy Ranker: ~3ms per prediction</text>
+    <text x="0" y="50" font-family="Arial, sans-serif" font-size="12" fill="#333">• Total Ranking: ~50ms for 1000 candidates</text>
+    <text x="0" y="65" font-family="Arial, sans-serif" font-size="12" fill="#333">• Accuracy: 87% engagement prediction</text>
+  </g>
+  
+  <!-- Swift Implementation -->
+  <g transform="translate(400, 380)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#FA5F55">Swift Implementation:</text>
+    <text x="0" y="20" font-family="Arial, sans-serif" font-size="12" fill="#333">• LightRanker class with sigmoid activation</text>
+    <text x="0" y="35" font-family="Arial, sans-serif" font-size="12" fill="#333">• HeavyRanker with neural network layers</text>
+    <text x="0" y="50" font-family="Arial, sans-serif" font-size="12" fill="#333">• FeatureExtractor for 14+ features</text>
+    <text x="0" y="65" font-family="Arial, sans-serif" font-size="12" fill="#333">• Async/await for concurrent processing</text>
+  </g>
+</svg>

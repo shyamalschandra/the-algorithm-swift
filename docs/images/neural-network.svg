@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="inputGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1DA1F2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0D8BD9;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="hiddenGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FA5F55;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E53E3E;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="outputGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#28A745;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1E7E34;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="weightGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6C757D;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#495057;stop-opacity:0.8" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="#F8F9FA"/>
+  
+  <!-- Title -->
+  <text x="400" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#1DA1F2">
+    Neural Network Architecture - Heavy Ranker
+  </text>
+  
+  <!-- Input Layer -->
+  <g id="inputLayer">
+    <text x="100" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1DA1F2">Input Layer</text>
+    <text x="100" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#1DA1F2">14 Features</text>
+    
+    <!-- Input neurons -->
+    <circle cx="100" cy="150" r="15" fill="url(#inputGradient)" stroke="#0D8BD9" stroke-width="2"/>
+    <text x="100" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">x₁</text>
+    
+    <circle cx="100" cy="180" r="15" fill="url(#inputGradient)" stroke="#0D8BD9" stroke-width="2"/>
+    <text x="100" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">x₂</text>
+    
+    <circle cx="100" cy="210" r="15" fill="url(#inputGradient)" stroke="#0D8BD9" stroke-width="2"/>
+    <text x="100" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">x₃</text>
+    
+    <circle cx="100" cy="240" r="15" fill="url(#inputGradient)" stroke="#0D8BD9" stroke-width="2"/>
+    <text x="100" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">x₄</text>
+    
+    <circle cx="100" cy="270" r="15" fill="url(#inputGradient)" stroke="#0D8BD9" stroke-width="2"/>
+    <text x="100" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">x₅</text>
+    
+    <circle cx="100" cy="300" r="15" fill="url(#inputGradient)" stroke="#0D8BD9" stroke-width="2"/>
+    <text x="100" y="305" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">x₆</text>
+    
+    <circle cx="100" cy="330" r="15" fill="url(#inputGradient)" stroke="#0D8BD9" stroke-width="2"/>
+    <text x="100" y="335" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">x₇</text>
+    
+    <circle cx="100" cy="360" r="15" fill="url(#inputGradient)" stroke="#0D8BD9" stroke-width="2"/>
+    <text x="100" y="365" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">x₈</text>
+    
+    <circle cx="100" cy="390" r="15" fill="url(#inputGradient)" stroke="#0D8BD9" stroke-width="2"/>
+    <text x="100" y="395" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">x₉</text>
+    
+    <circle cx="100" cy="420" r="15" fill="url(#inputGradient)" stroke="#0D8BD9" stroke-width="2"/>
+    <text x="100" y="425" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">x₁₀</text>
+    
+    <circle cx="100" cy="450" r="15" fill="url(#inputGradient)" stroke="#0D8BD9" stroke-width="2"/>
+    <text x="100" y="455" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">x₁₁</text>
+    
+    <circle cx="100" cy="480" r="15" fill="url(#inputGradient)" stroke="#0D8BD9" stroke-width="2"/>
+    <text x="100" y="485" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">x₁₂</text>
+    
+    <circle cx="100" cy="510" r="15" fill="url(#inputGradient)" stroke="#0D8BD9" stroke-width="2"/>
+    <text x="100" y="515" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">x₁₃</text>
+    
+    <circle cx="100" cy="540" r="15" fill="url(#inputGradient)" stroke="#0D8BD9" stroke-width="2"/>
+    <text x="100" y="545" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">x₁₄</text>
+  </g>
+  
+  <!-- Hidden Layer 1 -->
+  <g id="hiddenLayer1">
+    <text x="300" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#FA5F55">Hidden Layer 1</text>
+    <text x="300" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#FA5F55">20 Neurons</text>
+    <text x="300" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#FA5F55">ReLU Activation</text>
+    
+    <!-- Hidden layer 1 neurons -->
+    <circle cx="300" cy="150" r="12" fill="url(#hiddenGradient)" stroke="#E53E3E" stroke-width="2"/>
+    <circle cx="300" cy="180" r="12" fill="url(#hiddenGradient)" stroke="#E53E3E" stroke-width="2"/>
+    <circle cx="300" cy="210" r="12" fill="url(#hiddenGradient)" stroke="#E53E3E" stroke-width="2"/>
+    <circle cx="300" cy="240" r="12" fill="url(#hiddenGradient)" stroke="#E53E3E" stroke-width="2"/>
+    <circle cx="300" cy="270" r="12" fill="url(#hiddenGradient)" stroke="#E53E3E" stroke-width="2"/>
+    <circle cx="300" cy="300" r="12" fill="url(#hiddenGradient)" stroke="#E53E3E" stroke-width="2"/>
+    <circle cx="300" cy="330" r="12" fill="url(#hiddenGradient)" stroke="#E53E3E" stroke-width="2"/>
+    <circle cx="300" cy="360" r="12" fill="url(#hiddenGradient)" stroke="#E53E3E" stroke-width="2"/>
+    <circle cx="300" cy="390" r="12" fill="url(#hiddenGradient)" stroke="#E53E3E" stroke-width="2"/>
+    <circle cx="300" cy="420" r="12" fill="url(#hiddenGradient)" stroke="#E53E3E" stroke-width="2"/>
+    <circle cx="300" cy="450" r="12" fill="url(#hiddenGradient)" stroke="#E53E3E" stroke-width="2"/>
+    <circle cx="300" cy="480" r="12" fill="url(#hiddenGradient)" stroke="#E53E3E" stroke-width="2"/>
+    <circle cx="300" cy="510" r="12" fill="url(#hiddenGradient)" stroke="#E53E3E" stroke-width="2"/>
+    <circle cx="300" cy="540" r="12" fill="url(#hiddenGradient)" stroke="#E53E3E" stroke-width="2"/>
+  </g>
+  
+  <!-- Hidden Layer 2 -->
+  <g id="hiddenLayer2">
+    <text x="500" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#FA5F55">Hidden Layer 2</text>
+    <text x="500" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#FA5F55">10 Neurons</text>
+    <text x="500" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#FA5F55">ReLU Activation</text>
+    
+    <!-- Hidden layer 2 neurons -->
+    <circle cx="500" cy="200" r="12" fill="url(#hiddenGradient)" stroke="#E53E3E" stroke-width="2"/>
+    <circle cx="500" cy="230" r="12" fill="url(#hiddenGradient)" stroke="#E53E3E" stroke-width="2"/>
+    <circle cx="500" cy="260" r="12" fill="url(#hiddenGradient)" stroke="#E53E3E" stroke-width="2"/>
+    <circle cx="500" cy="290" r="12" fill="url(#hiddenGradient)" stroke="#E53E3E" stroke-width="2"/>
+    <circle cx="500" cy="320" r="12" fill="url(#hiddenGradient)" stroke="#E53E3E" stroke-width="2"/>
+    <circle cx="500" cy="350" r="12" fill="url(#hiddenGradient)" stroke="#E53E3E" stroke-width="2"/>
+    <circle cx="500" cy="380" r="12" fill="url(#hiddenGradient)" stroke="#E53E3E" stroke-width="2"/>
+    <circle cx="500" cy="410" r="12" fill="url(#hiddenGradient)" stroke="#E53E3E" stroke-width="2"/>
+    <circle cx="500" cy="440" r="12" fill="url(#hiddenGradient)" stroke="#E53E3E" stroke-width="2"/>
+    <circle cx="500" cy="470" r="12" fill="url(#hiddenGradient)" stroke="#E53E3E" stroke-width="2"/>
+  </g>
+  
+  <!-- Output Layer -->
+  <g id="outputLayer">
+    <text x="700" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#28A745">Output Layer</text>
+    <text x="700" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#28A745">1 Neuron</text>
+    <text x="700" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#28A745">Sigmoid Activation</text>
+    
+    <circle cx="700" cy="300" r="20" fill="url(#outputGradient)" stroke="#1E7E34" stroke-width="3"/>
+    <text x="700" y="305" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">y</text>
+  </g>
+  
+  <!-- Connections from input to hidden layer 1 -->
+  <g id="connections1" opacity="0.3">
+    <!-- Sample connections (not all for clarity) -->
+    <line x1="115" y1="150" x2="288" y2="150" stroke="url(#weightGradient)" stroke-width="1"/>
+    <line x1="115" y1="180" x2="288" y2="180" stroke="url(#weightGradient)" stroke-width="1"/>
+    <line x1="115" y1="210" x2="288" y2="210" stroke="url(#weightGradient)" stroke-width="1"/>
+    <line x1="115" y1="240" x2="288" y2="240" stroke="url(#weightGradient)" stroke-width="1"/>
+    <line x1="115" y1="270" x2="288" y2="270" stroke="url(#weightGradient)" stroke-width="1"/>
+    <line x1="115" y1="300" x2="288" y2="300" stroke="url(#weightGradient)" stroke-width="1"/>
+    <line x1="115" y1="330" x2="288" y2="330" stroke="url(#weightGradient)" stroke-width="1"/>
+    <line x1="115" y1="360" x2="288" y2="360" stroke="url(#weightGradient)" stroke-width="1"/>
+    <line x1="115" y1="390" x2="288" y2="390" stroke="url(#weightGradient)" stroke-width="1"/>
+    <line x1="115" y1="420" x2="288" y2="420" stroke="url(#weightGradient)" stroke-width="1"/>
+    <line x1="115" y1="450" x2="288" y2="450" stroke="url(#weightGradient)" stroke-width="1"/>
+    <line x1="115" y1="480" x2="288" y2="480" stroke="url(#weightGradient)" stroke-width="1"/>
+    <line x1="115" y1="510" x2="288" y2="510" stroke="url(#weightGradient)" stroke-width="1"/>
+    <line x1="115" y1="540" x2="288" y2="540" stroke="url(#weightGradient)" stroke-width="1"/>
+  </g>
+  
+  <!-- Connections from hidden layer 1 to hidden layer 2 -->
+  <g id="connections2" opacity="0.3">
+    <line x1="312" y1="150" x2="488" y2="200" stroke="url(#weightGradient)" stroke-width="1"/>
+    <line x1="312" y1="180" x2="488" y2="230" stroke="url(#weightGradient)" stroke-width="1"/>
+    <line x1="312" y1="210" x2="488" y2="260" stroke="url(#weightGradient)" stroke-width="1"/>
+    <line x1="312" y1="240" x2="488" y2="290" stroke="url(#weightGradient)" stroke-width="1"/>
+    <line x1="312" y1="270" x2="488" y2="320" stroke="url(#weightGradient)" stroke-width="1"/>
+    <line x1="312" y1="300" x2="488" y2="350" stroke="url(#weightGradient)" stroke-width="1"/>
+    <line x1="312" y1="330" x2="488" y2="380" stroke="url(#weightGradient)" stroke-width="1"/>
+    <line x1="312" y1="360" x2="488" y2="410" stroke="url(#weightGradient)" stroke-width="1"/>
+    <line x1="312" y1="390" x2="488" y2="440" stroke="url(#weightGradient)" stroke-width="1"/>
+    <line x1="312" y1="420" x2="488" y2="470" stroke="url(#weightGradient)" stroke-width="1"/>
+  </g>
+  
+  <!-- Connections from hidden layer 2 to output -->
+  <g id="connections3" opacity="0.3">
+    <line x1="512" y1="200" x2="680" y2="300" stroke="url(#weightGradient)" stroke-width="2"/>
+    <line x1="512" y1="230" x2="680" y2="300" stroke="url(#weightGradient)" stroke-width="2"/>
+    <line x1="512" y1="260" x2="680" y2="300" stroke="url(#weightGradient)" stroke-width="2"/>
+    <line x1="512" y1="290" x2="680" y2="300" stroke="url(#weightGradient)" stroke-width="2"/>
+    <line x1="512" y1="320" x2="680" y2="300" stroke="url(#weightGradient)" stroke-width="2"/>
+    <line x1="512" y1="350" x2="680" y2="300" stroke="url(#weightGradient)" stroke-width="2"/>
+    <line x1="512" y1="380" x2="680" y2="300" stroke="url(#weightGradient)" stroke-width="2"/>
+    <line x1="512" y1="410" x2="680" y2="300" stroke="url(#weightGradient)" stroke-width="2"/>
+    <line x1="512" y1="440" x2="680" y2="300" stroke="url(#weightGradient)" stroke-width="2"/>
+    <line x1="512" y1="470" x2="680" y2="300" stroke="url(#weightGradient)" stroke-width="2"/>
+  </g>
+  
+  <!-- Mathematical formulas -->
+  <text x="200" y="570" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1DA1F2">Forward Pass:</text>
+  <text x="200" y="585" font-family="Arial, sans-serif" font-size="10" fill="#333">h₁ = ReLU(W₁x + b₁)</text>
+  <text x="200" y="600" font-family="Arial, sans-serif" font-size="10" fill="#333">h₂ = ReLU(W₂h₁ + b₂)</text>
+  <text x="200" y="615" font-family="Arial, sans-serif" font-size="10" fill="#333">y = σ(W₃h₂ + b₃)</text>
+  
+  <!-- Performance metrics -->
+  <text x="400" y="570" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#28A745">Performance:</text>
+  <text x="400" y="585" font-family="Arial, sans-serif" font-size="10" fill="#333">• Inference Time: &lt; 5ms</text>
+  <text x="400" y="600" font-family="Arial, sans-serif" font-size="10" fill="#333">• Accuracy: 87%</text>
+  <text x="400" y="615" font-family="Arial, sans-serif" font-size="10" fill="#333">• Memory: 15MB</text>
+  
+  <!-- Swift implementation note -->
+  <text x="600" y="570" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#FA5F55">Swift Implementation:</text>
+  <text x="600" y="585" font-family="Arial, sans-serif" font-size="10" fill="#333">• HeavyRanker class</text>
+  <text x="600" y="600" font-family="Arial, sans-serif" font-size="10" fill="#333">• NeuralLayer components</text>
+  <text x="600" y="615" font-family="Arial, sans-serif" font-size="10" fill="#333">• Activation functions</text>
+</svg>
